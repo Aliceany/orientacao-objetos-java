@@ -1,6 +1,6 @@
 package livraria;
 
-public class Livro {
+public abstract class Livro {
 
 	private String nome;
 	private String descricao;
@@ -52,12 +52,10 @@ public class Livro {
 	public Livro() {
 		System.out.println("novo livro criado");
 	}
-	
 
 	public Livro(Autor autor) {
 		this.autor = autor;
 		this.isbn = "000-00-00000-00-0";
-		this.setImpresso(true);
 
 	}
 
@@ -77,10 +75,11 @@ public class Livro {
 	}
 
 	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.3)
+		if (porcentagem > 0.1) {
 			return false;
-		
-		this.valor-=this.valor*porcentagem;
+		}
+
+		this.valor -= this.valor * porcentagem;
 		System.out.println("aplicando desconto no Livro");
 		return true;
 	}
@@ -89,11 +88,14 @@ public class Livro {
 		return this.autor != null;
 	}
 
-	public boolean isImpresso() {
-		return impresso;
-	}
-
 	public void setImpresso(boolean impresso) {
 		this.impresso = impresso;
 	}
+
+	public boolean isImpresso() {
+		return this.impresso;
+	}
+	
+	
+	
 }

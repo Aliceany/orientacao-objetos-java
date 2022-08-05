@@ -4,7 +4,8 @@ public class CadastroDeLivros {
 
 	public static void main(String[] args) {
 
-		Livro livroComDesconto = new Livro();
+		Autor autor = new Autor();
+		Livro livroComDesconto = new LivroFisico(autor);
 		livroComDesconto.setValor(59.90);
 
 		System.out.println("Valor atual:  " + livroComDesconto.getValor());
@@ -13,12 +14,11 @@ public class CadastroDeLivros {
 
 		System.out.println("Valor com desconto:   " + livroComDesconto.getValor());
 
-		Autor autor = new Autor();
 		autor.setNome("Rodrigo Turini");
 		autor.setEmail("rodrigo.turini@caelum.com.br");
 		autor.setCpf("123.456.789.10");
 
-		Livro livro = new Livro();
+		Livro livro = new LivroFisico(autor);
 		livro.setNome("Java 8 Prático");
 		livro.setDescricao("Novos recursos da linguagem");
 		livro.setValor(59.90);
@@ -31,14 +31,14 @@ public class CadastroDeLivros {
 		outroAutor.setEmail("paulo.silveira@caelum.com.br");
 		outroAutor.setCpf("123.456.789.10");
 
-		Livro outroLivro = new Livro();
+		Livro outroLivro = new LivroFisico(outroAutor);
 		outroLivro.setNome("Lógica de Programação");
 		outroLivro.setDescricao("Crie seus primeiros programas");
 		outroLivro.setValor(59.90);
 		outroLivro.setIsbn("978-85-66250-22-0");
 
 		outroLivro.mostrarDetalhes();
-		
+
 		Autor autorEbook = new Autor();
 		Ebook ebook = new Ebook(autorEbook);
 		ebook.setNome("Java 8 Pratico");
