@@ -26,7 +26,6 @@ public class RegrasDeDesconto {
 		} else {
 			System.out.println("Valor do ebook com desconto:  " + ebook.getValor());
 		}
-		
 
 		Livro miniLivro = new MiniLivro(autor);
 		miniLivro.setValor(39.90);

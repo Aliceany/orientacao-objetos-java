@@ -1,6 +1,6 @@
 package livraria;
 
-public abstract class Livro {
+public  class Livro implements Produto {
 
 	private String nome;
 	private String descricao;
