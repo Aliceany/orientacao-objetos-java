@@ -1,4 +1,6 @@
-package livraria;
+package br.com.casadocodigo.livraria.produtos;
+
+import br.com.casadocodigo.livraria.Autor;
 
 public  class Livro implements Produto {
 
@@ -59,7 +61,7 @@ public  class Livro implements Produto {
 
 	}
 
-	void mostrarDetalhes() {
+	public void mostrarDetalhes() {
 		System.out.println("Mostrando detalhes do livro");
 		System.out.println("Nome: " + nome);
 		System.out.println("Descricao: " + descricao);

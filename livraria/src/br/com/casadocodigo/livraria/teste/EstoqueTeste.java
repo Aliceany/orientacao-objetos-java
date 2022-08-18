@@ -1,4 +1,4 @@
-package livraria;
+package br.com.casadocodigo.livraria.teste;
 
 public class EstoqueTeste {
 	public static void main(String[] args) {
